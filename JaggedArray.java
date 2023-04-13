@@ -21,9 +21,7 @@ public class JaggedArray {
             }
             System.out.println();
         }
-
-
-    }
+  }
 };
 
 
