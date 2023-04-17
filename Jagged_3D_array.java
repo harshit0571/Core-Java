@@ -1,11 +1,12 @@
 import java.util.Scanner;
 
-public class _2D_array_to_3D_array {
+public class Jagged_3D_array {
     public static void main(String[] args){
         Scanner inp=new Scanner(System.in);
         int n=inp.nextInt();
         int n2;
         int n3;
+        
         int[][][] arr=new int[n][][];
         for (int i = 0; i < arr.length; i++) {
             System.out.println("enter size of outer array");
