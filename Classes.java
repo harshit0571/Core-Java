@@ -19,7 +19,6 @@ class Student extends Marks {
         System.out.println("Student id: " + id);
         System.out.println("Student name: " + name);
     }
-
 };
 
 class Marks {
