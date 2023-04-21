@@ -18,10 +18,7 @@ public class Binary_to_Decimal {
             sum = sum * 10 + i;
             a = a / 2;
         }
-        while (count > 0) {
-            sum = sum * 10;
-            count--;
-        }
+
         System.out.println(sum + " " + count);
     }
 }
