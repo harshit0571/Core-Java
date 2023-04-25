@@ -32,5 +32,10 @@ public class string {
         // System.out.println(System.identityHashCode(a) + " " +
         // System.identityHashCode(b));
 
+        // string class is immutable, onl plus operator is overloaded, string pool and
+        // memory heap
+        // s2="mm"; String s3=new String("mm");
+        // pool heap memory
+        // only + operator is overloaded , java used for
     }
 }
