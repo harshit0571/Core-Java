@@ -10,9 +10,11 @@ public class neww {
         int i = 1;
         while (n > 0) {
             int a = n % 2;
-            count = count + a * i;
+            System.out.println(a);
+            // count = count + a * i;
             i = i * 10;
             n = n / 2;
+            System.out.println("n->" + n);
         }
         System.out.println(count);
     }
