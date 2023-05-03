@@ -20,3 +20,14 @@ public class neww {
     }
 
 }
+
+// adress sequencing- numerical controled memory and defination
+// address sequencing video
+// general , single , stack - explain , stack org- numerical diagram
+// instruction format- three adress, two , zero , one, numerical x= a+b* eq from
+// every address
+// addressing mode - > shanu puttal youtube video, five types
+// interupts- what is interupt all type- internal external
+// risc cisc diff
+// piplelining - defination, 4 intruction pipline diagram, hazard
+// dma- explain , controler transformer
