@@ -10,11 +10,12 @@ public class concurrent_sum {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = inp.nextInt();
         }
+        String str = "d";
+
         int sum = 0;
         int curr = 0;
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] - arr[i - 1] == 1) {
-                System.out.println("." + arr[i] + ".");
                 if (curr == 0) {
                     curr = arr[i] + curr + arr[i - 1];
                 } else {
