@@ -1,14 +1,14 @@
 // // public class ExceptionHandling {
-// //     public static void main(String[] args) {
+// // public static void main(String[] args) {
 
-// //     }
+// // }
 // // }
 // import java.io.*;
 
 // class Parent {
-//     void msg() {
-//         System.out.println("parent");
-//     } 
+// void msg() {
+// System.out.println("parent");
+// }
 // }
 
 // public class ExceptionHandling extends Parent{
@@ -24,21 +24,43 @@
 // Compile time error
 // // exeption handling by method overriding
 
-import java.io.*;
+// import java.io.*;
 
-class Parent {
-    void msg() {
-        System.out.println("parent");
-    }
-}
+// class Parent {
+// void msg() {
+// System.out.println("parent");
+// }
+// }
 
-class ExceptionHandling extends Parent {
-    void msg() throws ArithmeticException {
-        System.out.println("child");
-    }
+// class ExceptionHandling extends Parent {
+// void msg() throws ArithmeticException {
+// System.out.println("child");
+// }
 
-    public static void main(String args[]) {
-        Parent p = new ExceptionHandling();
-        p.msg();
-    }
-}
+// public static void main(String args[]) {
+// Parent p = new ExceptionHandling();
+// p.msg();
+// }
+// }
+
+// import java.io.*;
+
+// class Parent {
+// void msg() throws Exception {
+// System.out.println("parent");
+// }
+// }
+
+// class ExceptionHandling extends Parent {
+// void msg() throws Exception {
+// System.out.println("child");
+// }
+
+// public static void main(String args[]) {
+// Parent p = new ExceptionHandling();
+// try {
+// p.msg();
+// } catch (Exception e) {
+// }
+// }
+// }
