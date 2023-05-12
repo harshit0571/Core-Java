@@ -20,7 +20,7 @@ public class may12Split {
                 }
             }
         } catch (Exception e) {
-
+            System.out.println(e);
         }
     }
 }
