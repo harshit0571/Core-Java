@@ -3,7 +3,7 @@ import java.util.*;
 public class panagram {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
-        String s = inp.nextLine();
+        String s = inp.nextInt();
         HashSet<Character> set = new HashSet<>();
         for (int i = 0; i < s.length(); i++) {
             set.add(s.charAt(i));
@@ -13,5 +13,6 @@ public class panagram {
         } else {
             System.out.println(false);
         }
+
     }
 }
