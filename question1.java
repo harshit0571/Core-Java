@@ -1,3 +1,4 @@
+import java.applet.Applet;
 import java.util.*;
 
 public class question1 {
@@ -17,19 +18,19 @@ public class question1 {
         inp.nextLine();
         ArrayList<String> arr = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            String s = inp.next();
+            String s = inp.nextLine();
             arr.add(s);
         }
-        inp.nextLine();
         String k = inp.nextLine();
-        ArrayList<String> ans = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            if (k.compareTo(arr.get(i)) <= 0) {
-                ans.add(arr.get(i));
+        int count = 0;
+        for (int i = 0; i < arr.size(); i++) {
+            String str = arr.get(i).substring(0, k.length());
+            System.out.println(str);
+            if (str.equals(k)) {
+                count++;
             }
         }
-        System.out.println(ans);
-
+        System.out.println(count);
     }
 }
 
