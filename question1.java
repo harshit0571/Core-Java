@@ -13,18 +13,26 @@ public class question1 {
 
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
-        ArrayList<String> arr = new ArrayList<>();
-        String n = inp.nextLine();
-        while (n.equals("-1") == false) {
-            arr.add(n);
-            n = inp.nextLine();
+        int n = inp.nextInt();
+        String key[] = new String[n];
+        int value[] = new int[n];
+        inp.nextLine();
+        for (int i = 0; i < value.length; i++) {
+            String s = inp.next();
+            int k = inp.nextInt();
+            key[i] = s;
+            value[i] = k;
+            inp.nextLine();
         }
-        int max = 0;
-        for (int i = 0; i < arr.size(); i++) {
-            int size = arr.get(i).length();
-            max = Math.max(max, size);
+        int val = 0;
+        String max = "";
+        for (int i = 0; i < key.length; i++) {
+            if (key[i].compareTo(max) > 0) {
+                max = key[i];
+                val = value[i];
+            }
         }
-        System.out.println(max);
+        System.out.println(val);
 
     }
 }
