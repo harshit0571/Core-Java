@@ -13,15 +13,18 @@ public class question1 {
 
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
-        ArrayList<Integer> arr = new ArrayList<>();
-        int n = inp.nextInt();
-        inp.nextLine();
-        for (int index = 0; index < n; index++) {
-            int a = inp.nextInt();
-            arr.add(a);
+        ArrayList<String> arr = new ArrayList<>();
+        String n = inp.nextLine();
+        while (n.equals("-1") == false) {
+            arr.add(n);
+            n = inp.nextLine();
         }
-        Collections.sort(arr);
-        System.out.println(arr);
+        int max = 0;
+        for (int i = 0; i < arr.size(); i++) {
+            int size = arr.get(i).length();
+            max = Math.max(max, size);
+        }
+        System.out.println(max);
 
     }
 }
