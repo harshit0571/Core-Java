@@ -14,25 +14,21 @@ public class question1 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
-        String key[] = new String[n];
-        int value[] = new int[n];
         inp.nextLine();
-        for (int i = 0; i < value.length; i++) {
+        ArrayList<String> arr = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
             String s = inp.next();
-            int k = inp.nextInt();
-            key[i] = s;
-            value[i] = k;
-            inp.nextLine();
+            arr.add(s);
         }
-        int val = 0;
-        String max = "";
-        for (int i = 0; i < key.length; i++) {
-            if (key[i].compareTo(max) > 0) {
-                max = key[i];
-                val = value[i];
+        inp.nextLine();
+        String k = inp.nextLine();
+        ArrayList<String> ans = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if (k.compareTo(arr.get(i)) <= 0) {
+                ans.add(arr.get(i));
             }
         }
-        System.out.println(val);
+        System.out.println(ans);
 
     }
 }
