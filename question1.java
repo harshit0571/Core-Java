@@ -14,23 +14,19 @@ public class question1 {
 
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
-        int n = inp.nextInt();
-        inp.nextLine();
-        ArrayList<String> arr = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            String s = inp.nextLine();
-            arr.add(s);
-        }
-        String k = inp.nextLine();
-        int count = 0;
-        for (int i = 0; i < arr.size(); i++) {
-            String str = arr.get(i).substring(0, k.length());
-            System.out.println(str);
-            if (str.equals(k)) {
-                count++;
+        String s = inp.nextLine();
+        String d = inp.nextLine();
+        char[] ans = s.toCharArray();
+        char[] arr = d.toCharArray();
+        String a = "";
+        for (int i = 0; i < arr.length && i < ans.length; i++) {
+            if (arr[i] == ans[i]) {
+                a = a + arr[i];
+            } else {
+                break;
             }
         }
-        System.out.println(count);
+        System.out.println(a);
     }
 }
 
