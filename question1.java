@@ -30,5 +30,14 @@ public class question1 {
     }
 }
 
+// instruction cycle
+// interupt cycle
+// timming contril
+// bus dia
+// type of
+// instruction
+// moris
+// ke akhri 10;
+
 // aman harshit aman
 // ans : aman , harshit,
