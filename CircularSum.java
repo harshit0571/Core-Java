@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class CircularSum {
     public static void main(String[] args) {
@@ -10,6 +10,7 @@ public class CircularSum {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = inp.nextInt();
         }
+        // 1 2 3 4 5
         for (int i = 0; i < arr.length; i++) {
             for (int j = i; j <= arr.length; j++) {
 
@@ -22,13 +23,12 @@ public class CircularSum {
                     }
                     break;
                 } else {
-                    System.out.println(i + " " + j + " " + sum);
+                    // System.out.println(i + " " + j + " " + sum);
                     sum = sum + arr[j];
                     max = Math.max(sum, max);
                 }
             }
             sum = 0;
-            System.out.println(max);
         }
 
         System.out.println(max);
