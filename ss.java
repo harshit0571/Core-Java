@@ -1,25 +1,25 @@
-import java.util.*;
+interface StringFunction {
+    String run(String str);
+}
 
-public class ss {
+public class lambdaExpression {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        ArrayList<Integer> l = new ArrayList<>();
-        int i = 0;
-        int j = 1;
-        int c = 1;
-        for (i = 0; i < n; i++) {
-            int m = sc.nextInt();
-            l.add(m);
-        }
-        for (i = 0; i < n; i++) {
-            if (i != 0 && l.get(i) > l.get(i - 1)) {
-                c++;
-                System.out.print(c + " ");
-            } else {
-                c = 1;
-                System.out.print(c + " ");
-            }
-        }
+        StringFunction exclaim = (s) -> s + "!";
+        StringFunction ask = (s) -> s + "?";
+        printFormatted("Hello", exclaim);
+        printFormatted("Hello", ask);
+    }
+
+    public static void printFormatted(String str, StringFunction format) {
+        String result = format.run(str);
+        System.out.println(result);
     }
 }
+// 1.Write a lambda expression that takes two integers as parameters and returns
+// their sum.
+// 2.Write a lambda expression to sort a list of integers in ascending order.
+// 3.Given a list of integers, use a lambda expression to calculate the sum of
+// all even numbers.
+// 4.Write a lambda expression to find the maximum value in a list of integers.
+// 5.Write a lambda expression to convert a list of strings into a single
+// concatenated string.
