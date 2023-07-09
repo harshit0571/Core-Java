@@ -7,6 +7,7 @@ public class lambdaExpression {
         StringFunction exclaim = (s) -> s + "!";
         StringFunction ask = (s) -> s + "?";
         printFormatted("Hello", exclaim);
+        
         printFormatted("Hello", ask);
     }
 
