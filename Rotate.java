@@ -28,20 +28,13 @@ public class Rotate {
         }
 
         reverse(arr, 0, n - 1);
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
+
         reverse(arr, 0, n - k - 1);
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
+
         reverse(arr, n - k, n - 1);
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
-        System.out.println();
 
         // 1 2 3 4 5
         // 5 4 3 2 1
