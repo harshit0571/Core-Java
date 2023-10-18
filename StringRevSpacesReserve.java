@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TwoStackArray {
+public class StringRevSpacesReserve {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         String str = inp.nextLine();
