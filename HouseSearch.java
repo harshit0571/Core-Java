@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class HouseSearch {
     static boolean check(int i) {
         int n = i;
-        n = (n - 2) / 3;
-        if (n == 1) {
+        n = (n - 2) % 3;
+        if (n == 0) {
             return true;
         }
         return false;
@@ -15,15 +15,16 @@ public class HouseSearch {
         int n = inp.nextInt();
         int m = inp.nextInt();
         int count = 0;
-        int i = 1;
+        int i = 5;
         while (count < n) {
 
-            if (check(i)) {
-
-                System.out.println(count);
+            if (check(i) && i % m != 0) {
+                System.out.println(i);
                 count++;
             }
             i++;
+            // System.out.println(i);
+
         }
     }
 }

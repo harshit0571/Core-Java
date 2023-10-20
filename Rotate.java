@@ -18,11 +18,7 @@ public class Rotate {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
         int k = inp.nextInt();
-
         int[] arr = new int[n];
-
-        // 1 2 3 4 5
-
         for (int i = 0; i < n; i++) {
             arr[i] = inp.nextInt();
         }
@@ -35,10 +31,5 @@ public class Rotate {
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
-
-        // 1 2 3 4 5
-        // 5 4 3 2 1
-        // 3 4 5 2 1
-
     }
 }
