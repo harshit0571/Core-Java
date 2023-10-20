@@ -10,6 +10,7 @@ public class Bit {
         char[] arr = str.toCharArray();
         arr[k - 1] = '1';
         String ans = new String(arr);
-        System.out.println(ans);
+        int a = Integer.parseInt(ans, 2);
+        System.out.println(a);
     }
 }
