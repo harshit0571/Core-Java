@@ -21,11 +21,13 @@ public class GoodSubbaray {
                 if (set.size() == k) {
                     count++;
                 }
+                System.out.print(arr[e] + " ");
                 e++;
-
             }
+            System.out.println();
             s++;
             e = s;
+
         }
         System.out.println(count);
 

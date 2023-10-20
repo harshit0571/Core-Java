@@ -7,7 +7,11 @@ public class ReverseWhileMaintainingSpace {
         int k = str.length() - 1;
         String ans = "";
         for (int i = 0; i < str.length(); i++) {
-            ans += (str.charAt(i) == ' ' ? " " : "") + "" + str.charAt(k);
+            if (str.charAt(i) == ' ') {
+                ans += " ";
+            }
+            ans += str.charAt(k);
+            // ans += (str.charAt(i) == ' ' ? " " : "") + "" + str.charAt(k);
             k--;
         }
         System.out.println(ans);
