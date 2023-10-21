@@ -13,6 +13,7 @@ public class Subsequence {
             for (int j = 0; j < size; j++) {
                 ans.add(ans.get(j) + s.charAt(i));
             }
+
         }
         System.out.println(ans);
     }

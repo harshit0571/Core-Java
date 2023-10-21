@@ -9,7 +9,7 @@ public class FormLargestNumber {
             arr[i] = inp.next();
         }
         for (int i = 0; i < arr.length; i++) {
-
+     f
             for (int j = 0; j < arr.length - 1; j++) {
                 String one = arr[j] + arr[j + 1];
                 String two = arr[j + 1] + arr[j];

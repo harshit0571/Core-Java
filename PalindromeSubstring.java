@@ -21,16 +21,27 @@ public class PalindromeSubstring {
         int e = 0;
         ArrayList<String> ans = new ArrayList<>();
 
-        while (s < str.length()) {
-            while (e < str.length()) {
-                if (checkPali(str, s, e)) {
-                    ans.add(str.substring(s, e + 1));
+        // while (s < str.length()) {
+        // while (e < str.length()) {
+        // if (checkPali(str, s, e)) {
+        // ans.add(str.substring(s, e + 1));
+        // }
+        // e++;
+        // }
+        // s++;
+        // e = s;
+        // }
+
+        for (int i = 0; i < str.length(); i++) {
+            String temp = "";
+            for (int j = i; j < str.length(); j++) {
+                temp += str.charAt(j);
+                if (checkPali(temp, 0, temp.length() - 1)) {
+                    ans.add(temp);
                 }
-                e++;
             }
-            s++;
-            e = s;
         }
+
         System.out.println(ans);
     }
 }
