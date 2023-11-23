@@ -1,9 +1,8 @@
 import java.util.Arrays;
 
 public class MergeSort {
-    static int[] Merge(int[] arr1, int[] arr2) {
+    static int[] Conquer(int[] arr1, int[] arr2) {
         int[] arr = new int[arr1.length + arr2.length];
-
         int one = 0;
         int two = 0;
         int i = 0;
@@ -12,6 +11,7 @@ public class MergeSort {
                 arr[i] = arr1[one];
                 one++;
             } else {
+                System.out.println(arr2[two]);
                 arr[i] = arr2[two];
                 two++;
             }
@@ -30,10 +30,28 @@ public class MergeSort {
         return arr;
     }
 
-    public static void main(String[] args) {
-        int[] arr1 = new int[] { 1, 3, 5, 7 };
-        int[] arr2 = new int[] { 2, 4, 6, 8 };
-        int[] arr = Merge(arr1, arr2);
-        System.out.println(Arrays.toString(arr));
+    static void print(int arr[], int start, int end) {
+        for (int i = start; i <= end; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
+
+    static void divide(int arr[], int start, int end) {
+        print(arr, start, end);
+        if (start == end) {
+            return;
+        }
+        int mid = (start + end) / 2;
+        divide(arr, start, mid);
+        divide(arr, mid + 1, end);
+
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[] { 12, 53, 3, 21, 44 };
+        divide(arr, 0, arr.length - 1);
+
+    }
+
 }
