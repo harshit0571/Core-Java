@@ -5,7 +5,7 @@ class Demo2 {
 
     static int findPivot(int arr[], int start, int end) {
 
-        // Select a Pivot Element
+        // SzaaaAQQWelect a Pivot Element 
 
         int pivot = arr[end];
 
@@ -14,14 +14,14 @@ class Demo2 {
         int largeValue = start - 1; // red
 
         while (findSmallerEqual <= end) {
-
+          
             // find the value that is less than equal to Pivot
 
             while (findSmallerEqual <= end && arr[findSmallerEqual] > pivot) {
 
                 findSmallerEqual++;
 
-            }
+            }   
 
             System.out.println(findSmallerEqual);
 

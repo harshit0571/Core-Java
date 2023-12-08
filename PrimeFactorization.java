@@ -14,16 +14,20 @@ public class PrimeFactorization {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
+        int t = n;
         ArrayList<Integer> arr = new ArrayList<>();
-        for (int i = 2; i <= n / 2; i++) {
+        for (int i = 2; i <= t; i++) {
             System.out.println(i);
             if (prime(i)) {
                 while (n % i == 0) {
                     arr.add(i);
                     n = n / i;
                 }
+
             }
         }
         System.out.println(arr);
     }
 }
+
+// 12-2 2 3
