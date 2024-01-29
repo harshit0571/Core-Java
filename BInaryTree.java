@@ -106,6 +106,30 @@ public class BInaryTree {
         }
     }
 
+    static void rightView(Node root) {
+        if (root == null) {
+            return;
+        }
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                Node temp = q.poll();
+                if (i == size - 1) {
+                    System.out.println(temp.val);
+                }
+                if (temp.left != null) {
+                    q.add(temp.left);
+                }
+                if (temp.right != null) {
+                    q.add(temp.right);
+                }
+
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
@@ -115,7 +139,7 @@ public class BInaryTree {
         }
         levelorder(root);
         System.out.println();
-        leftView(root);
+        rightView(root);
 
         // System.out.println(height(root));
         // preorder(root);
