@@ -28,9 +28,24 @@ public class BuubleSort {
 
     }
 
+    static void Insertion(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            int j = i;
+            int temp = arr[i + 1];
+            while (j >= 0 && temp < arr[j]) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = temp;
+        }
+        System.out.println(Arrays.toString(arr));
+
+    }
+
     public static void main(String[] args) {
         int arr[] = { 4, 6, 8, 1, 0, 2 };
         Bubble(arr);
         Selection(arr);
+        Insertion(arr);
     }
 }
