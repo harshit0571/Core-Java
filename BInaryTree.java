@@ -6,9 +6,6 @@ public class BInaryTree {
         Node left, right;
         int val;
 
-        Node() {
-        }
-
         Node(int val) {
             this.val = val;
         }
@@ -35,13 +32,35 @@ public class BInaryTree {
         preorder(root.right);
     }
 
+    static void inorder(Node root) {
+        if (root == null) {
+            return;
+        }
+        inorder(root.left);
+        System.out.print(root.val + " ");
+        inorder(root.right);
+    }
+
+    static void postorder(Node root) {
+        if (root == null) {
+            return;
+        }
+        postorder(root.left);
+        postorder(root.right);
+        System.out.print(root.val + " ");
+    }
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
-        Node root = new Node();
+        Node root = null;
         for (int i = 0; i < n; i++) {
-            insert(root, inp.nextInt());
+            root = insert(root, inp.nextInt());
         }
         preorder(root);
+        System.out.println();
+        inorder(root);
+        System.out.println();
+        postorder(root);
     }
 }
