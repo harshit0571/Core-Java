@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class BInaryTree {
@@ -50,6 +52,28 @@ public class BInaryTree {
         System.out.print(root.val + " ");
     }
 
+    static void levelorder(Node root) {
+        if (root == null) {
+            return;
+        }
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                Node temp = q.poll();
+                System.out.print(temp.val + " ");
+                if (temp.left != null) {
+                    q.add(temp.left);
+                }
+                if (temp.right != null) {
+                    q.add(temp.right);
+                }
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
@@ -57,10 +81,12 @@ public class BInaryTree {
         for (int i = 0; i < n; i++) {
             root = insert(root, inp.nextInt());
         }
-        preorder(root);
-        System.out.println();
-        inorder(root);
-        System.out.println();
-        postorder(root);
+        levelorder(root);
+        // preorder(root);
+        // System.out.println();
+        // inorder(root);
+        // System.out.println();
+        // postorder(root);
+
     }
 }
