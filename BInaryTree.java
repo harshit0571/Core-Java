@@ -74,6 +74,15 @@ public class BInaryTree {
 
     }
 
+    static int height(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = height(root.left);
+        int right = height(root.right);
+        return Math.max(left, right) + 1;
+    }
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
@@ -82,6 +91,7 @@ public class BInaryTree {
             root = insert(root, inp.nextInt());
         }
         levelorder(root);
+        // System.out.println(height(root));
         // preorder(root);
         // System.out.println();
         // inorder(root);
