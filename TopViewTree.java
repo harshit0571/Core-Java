@@ -1,8 +1,8 @@
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
-public class BInaryTree {
+public class TopViewTree {
 
     public static class Node {
         Node left, right;
@@ -82,9 +82,10 @@ public class BInaryTree {
         return Math.max(left, right) + 1;
     }
 
-    static void leftView(Node root) {
+    static ArrayList<Integer> leftView(Node root) {
+        ArrayList<Integer> list = new ArrayList<>();
         if (root == null) {
-            return;
+            return list;
         }
         Queue<Node> q = new LinkedList<>();
         q.add(root);
@@ -93,7 +94,8 @@ public class BInaryTree {
             for (int i = 0; i < size; i++) {
                 Node temp = q.poll();
                 if (i == 0) {
-                    System.out.print(temp.val + " ");
+                    // System.out.print(temp.val + " ");
+                    list.add(temp.val);
                 }
                 if (temp.left != null) {
                     q.add(temp.left);
@@ -103,11 +105,13 @@ public class BInaryTree {
                 }
             }
         }
+        return list;
     }
 
-    static void rightView(Node root) {
+    static ArrayList<Integer> rightView(Node root) {
+        ArrayList<Integer> list = new ArrayList<>();
         if (root == null) {
-            return;
+            return list;
         }
         Queue<Node> q = new LinkedList<>();
         q.add(root);
@@ -116,7 +120,8 @@ public class BInaryTree {
             for (int i = 0; i < size; i++) {
                 Node temp = q.poll();
                 if (i == size - 1) {
-                    System.out.println(temp.val);
+                    // System.out.println(temp.val);
+                    list.add(temp.val);
                 }
                 if (temp.left != null) {
                     q.add(temp.left);
@@ -127,6 +132,7 @@ public class BInaryTree {
 
             }
         }
+        return list;
     }
 
     public static void main(String[] args) {
@@ -136,9 +142,17 @@ public class BInaryTree {
         for (int i = 0; i < n; i++) {
             root = insert(root, inp.nextInt());
         }
-        levelorder(root);
+        ArrayList<Integer> Larr = leftView(root);
+        ArrayList<Integer> Rarr = rightView(root);
         System.out.println();
-        rightView(root);
+        Collections.reverse(Larr);
+        for (int index = 0; index < Larr.size(); index++) {
+            System.out.println(Larr.get(index));
+        }
+        for (int index = 1; index < Rarr.size(); index++) {
+            System.out.println(Rarr.get(index));
+        }
+        // rightView(root);
 
         // System.out.println(height(root));
         // preorder(root);
