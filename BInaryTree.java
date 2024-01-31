@@ -131,6 +131,19 @@ public class BInaryTree {
         }
     }
 
+    static void printLevel(Node root, int level) {
+        if (root == null) {
+            return;
+        }
+        if (level == 1) {
+            System.out.println(root.val + " ");
+            return;
+        } else {
+            printLevel(root.left, level - 1);
+            printLevel(root.right, level - 1);
+        }
+    }
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
@@ -139,13 +152,15 @@ public class BInaryTree {
             root = insert(root, inp.nextInt());
         }
 
-        preorder(root);
-        System.out.println();
-        inorder(root);
-        System.out.println();
-        postorder(root);
-        int h = height(root);
-        System.out.println("dia-> " + diameter);
+        printLevel(root, 4);
+
+        // preorder(root);
+        // System.out.println();
+        // inorder(root);
+        // System.out.println();
+        // postorder(root);
+        // int h = height(root);
+        // System.out.println("dia-> " + diameter);
 
         // levelorder(root);
         // System.out.println();
