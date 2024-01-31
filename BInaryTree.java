@@ -3,6 +3,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class BInaryTree {
+    static int diameter = 0;
 
     public static class Node {
         Node left, right;
@@ -79,6 +80,7 @@ public class BInaryTree {
         }
         int left = height(root.left);
         int right = height(root.right);
+        diameter = Math.max(diameter, left + right + 1);
         return Math.max(left, right) + 1;
     }
 
@@ -136,9 +138,18 @@ public class BInaryTree {
         for (int i = 0; i < n; i++) {
             root = insert(root, inp.nextInt());
         }
-        levelorder(root);
+
+        preorder(root);
         System.out.println();
-        rightView(root);
+        inorder(root);
+        System.out.println();
+        postorder(root);
+        int h = height(root);
+        System.out.println("dia-> " + diameter);
+
+        // levelorder(root);
+        // System.out.println();
+        // rightView(root);
 
         // System.out.println(height(root));
         // preorder(root);
@@ -149,3 +160,7 @@ public class BInaryTree {
 
     }
 }
+
+// pre-> root, left, right
+// ino -> left root right
+// post -> left right root
