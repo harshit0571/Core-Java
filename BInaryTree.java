@@ -144,6 +144,24 @@ public class BInaryTree {
         }
     }
 
+    static void printLeaf(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        if (root.left == null && root.right == null) {
+            System.out.print(root.val + " ");
+            return;
+        } else {
+            if (root.left != null) {
+                printLeaf(root.left);
+            }
+            if (root.right != null) {
+                printLeaf(root.right);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
@@ -153,6 +171,7 @@ public class BInaryTree {
         }
 
         printLevel(root, 4);
+        printLeaf(root);
 
         // preorder(root);
         // System.out.println();
