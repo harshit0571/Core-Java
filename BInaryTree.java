@@ -162,6 +162,21 @@ public class BInaryTree {
         }
     }
 
+    static Node loa(Node root, int p, int q) {
+        if (root == null || root.val == p || root.val == q) {
+            return root;
+        }
+        Node left = loa(root.left, p, q);
+        Node right = loa(root.right, p, q);
+        if (left == null) {
+            return right;
+        } else if (right == null) {
+            return left;
+        } else {
+            return root;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
@@ -170,8 +185,9 @@ public class BInaryTree {
             root = insert(root, inp.nextInt());
         }
 
-        printLevel(root, 4);
-        printLeaf(root);
+        // printLevel(root, 4);
+        // printLeaf(root);
+        System.out.println(loa(root, 30, 60).val);
 
         // preorder(root);
         // System.out.println();
