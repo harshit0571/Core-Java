@@ -1,4 +1,6 @@
-public class Solution {
+import java.util.Stack;
+
+public class StockSpan {
     public static int[] findStockSpans(int[] arr) {
         Stack<Integer> st = new Stack<>();
         int[] ans = new int[arr.length];

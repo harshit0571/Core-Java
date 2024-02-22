@@ -1,15 +1,16 @@
 import java.util.Scanner;
 
 public class CoinChange {
-
-    public static int count(int[] coins, int n, int sum) {
-        if (n <= 0 || sum < 0)
+    static int Coin(int[] coin, int n, int sum) {
+        if (n <= 0 || sum < 0) {
             return 0;
+        }
 
-        if (sum == 0)
+        if (sum == 0) {
             return 1;
+        }
 
-        return count(coins, n - 1, sum) + count(coins, n, sum - coins[n - 1]);
+        return Coin(coin, n - 1, sum) + Coin(coin, n, sum - coin[n - 1]);
     }
 
     public static void main(String[] args) {
@@ -19,8 +20,9 @@ public class CoinChange {
         for (int i = 0; i < n; i++) {
             coins[i] = in.nextInt();
         }
-        int sum = in.nextInt();
-        System.out.println(count(coins, n, sum));
+        int t = in.nextInt();
+        System.out.println(Coin(coins, n, t));
+
     }
 
 }

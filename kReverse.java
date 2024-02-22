@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class kReverse {
     static void reverse(int[] arr, int s, int k) {
+        if (k > arr.length - 1) {
+            k = arr.length - 1;
+        }
         while (s < k) {
             int temp = arr[s];
             arr[s] = arr[k];
@@ -26,7 +29,6 @@ public class kReverse {
         for (int i = 0; i < n; i++) {
             reverse(arr, i, i + k - 1);
             i = i + k - 1;
-            System.out.println(i);
         }
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
@@ -34,3 +36,4 @@ public class kReverse {
 
     }
 }
+1 2 3 4 5 6 7 8
