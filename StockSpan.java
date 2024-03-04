@@ -21,3 +21,5 @@ public class StockSpan {
         return ans;
     }
 }
+
+// 5 4 3 2 7
